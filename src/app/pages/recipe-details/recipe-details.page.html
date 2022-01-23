@@ -1,0 +1,127 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button color="primary" (click)="addFavorite()">
+        <ion-icon slot="icon-only" name="heart"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content padding>
+  <ion-card *ngIf="recipe | async; let recipe">
+    <ion-card-header>
+      <ion-card-title>
+        {{ recipe[0].strMeal }}
+      </ion-card-title>
+      <ion-card-subtitle>
+        Category : {{ recipe[0].strCategory }}   
+      </ion-card-subtitle>
+      <ion-card-subtitle>
+        Area : {{ recipe[0].strArea }}   
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content text-center>
+      <img [src]="recipe[0].strMealThumb" class="info-img">
+    </ion-card-content>
+    
+    <ion-list lines="none">
+      <ion-card-title>
+        Ingredients
+      </ion-card-title>
+     
+      <ion-item *ngIf="recipe[0].strIngredient1 != null && recipe[0].strIngredient1 != ''">
+        <ion-label slot="start">{{recipe[0].strIngredient1}}</ion-label>
+        <ion-label slot="end">{{recipe[0].strMeasure1}}</ion-label>
+      </ion-item>
+      <ion-item *ngIf="recipe[0].strIngredient2 != null && recipe[0].strIngredient2 != ''">
+        <ion-label slot="start">{{recipe[0].strIngredient2}}</ion-label>
+        <ion-label slot="end">{{recipe[0].strMeasure2}}</ion-label>
+      </ion-item>
+      <ion-item *ngIf="recipe[0].strIngredient3 != null && recipe[0].strIngredient3 != ''">
+        <ion-label slot="start">{{recipe[0].strIngredient3}}</ion-label>
+        <ion-label slot="end">{{recipe[0].strMeasure3}}</ion-label>
+      </ion-item>
+      <ion-item *ngIf="recipe[0].strIngredient4 != null && recipe[0].strIngredient4 != ''">
+        <ion-label slot="start">{{recipe[0].strIngredient4}}</ion-label>
+        <ion-label slot="end">{{recipe[0].strMeasure4}}</ion-label>
+      </ion-item>
+      <ion-item *ngIf="recipe[0].strIngredient5 != null && recipe[0].strIngredient5 != ''">
+        <ion-label slot="start">{{recipe[0].strIngredient5}}</ion-label>
+        <ion-label slot="end">{{recipe[0].strMeasure5}}</ion-label>
+      </ion-item>
+      <ion-item *ngIf="recipe[0].strIngredient6 != null && recipe[0].strIngredient6 != ''">
+        <ion-label slot="start">{{recipe[0].strIngredient6}}</ion-label>
+        <ion-label slot="end">{{recipe[0].strMeasure6}}</ion-label>
+      </ion-item>
+      <ion-item *ngIf="recipe[0].strIngredient7 != null && recipe[0].strIngredient7 != ''">
+        <ion-label slot="start">{{recipe[0].strIngredient7}}</ion-label>
+        <ion-label slot="end">{{recipe[0].strMeasure7}}</ion-label>
+      </ion-item>
+      <ion-item *ngIf="recipe[0].strIngredient8 != null && recipe[0].strIngredient8 != ''">
+        <ion-label slot="start">{{recipe[0].strIngredient8}}</ion-label>
+        <ion-label slot="end">{{recipe[0].strMeasure8}}</ion-label>
+      </ion-item>
+      <ion-item *ngIf="recipe[0].strIngredient9 != null && recipe[0].strIngredient9 != ''">
+        <ion-label slot="start">{{recipe[0].strIngredient9}}</ion-label>
+        <ion-label slot="end">{{recipe[0].strMeasure9}}</ion-label>
+      </ion-item>
+      <ion-item *ngIf="recipe[0].strIngredient10 != null && recipe[0].strIngredient10 != ''">
+        <ion-label slot="start">{{recipe[0].strIngredient10}}</ion-label>
+        <ion-label slot="end">{{recipe[0].strMeasure10}}</ion-label>
+      </ion-item>
+      <ion-item *ngIf="recipe[0].strIngredient11 != null && recipe[0].strIngredient11 != ''">
+        <ion-label slot="start">{{recipe[0].strIngredient11}}</ion-label>
+        <ion-label slot="end">{{recipe[0].strMeasure11}}</ion-label>
+      </ion-item>
+      <ion-item *ngIf="recipe[0].strIngredient12 != null && recipe[0].strIngredient12 != ''">
+        <ion-label slot="start">{{recipe[0].strIngredient12}}</ion-label>
+        <ion-label slot="end">{{recipe[0].strMeasure12}}</ion-label>
+      </ion-item>
+      <ion-item *ngIf="recipe[0].strIngredient13 != null && recipe[0].strIngredient13 != ''">
+        <ion-label slot="start">{{recipe[0].strIngredient13}}</ion-label>
+        <ion-label slot="end">{{recipe[0].strMeasure13}}</ion-label>
+      </ion-item>
+      <ion-item *ngIf="recipe[0].strIngredient14 != null && recipe[0].strIngredient14 != ''">
+        <ion-label slot="start">{{recipe[0].strIngredient14}}</ion-label>
+        <ion-label slot="end">{{recipe[0].strMeasure14}}</ion-label>
+      </ion-item>
+      <ion-item *ngIf="recipe[0].strIngredient15 != null && recipe[0].strIngredient15 != ''">
+        <ion-label slot="start">{{recipe[0].strIngredient15}}</ion-label>
+        <ion-label slot="end">{{recipe[0].strMeasure15}}</ion-label>
+      </ion-item>
+      <ion-item *ngIf="recipe[0].strIngredient16 != null && recipe[0].strIngredient16 != ''">
+        <ion-label slot="start">{{recipe[0].strIngredient16}}</ion-label>
+        <ion-label slot="end">{{recipe[0].strMeasure16}}</ion-label>
+      </ion-item>
+      <ion-item *ngIf="recipe[0].strIngredient17 != null && recipe[0].strIngredient17 != ''">
+        <ion-label slot="start">{{recipe[0].strIngredient17}}</ion-label>
+        <ion-label slot="end">{{recipe[0].strMeasure17}}</ion-label>
+      </ion-item>
+      <ion-item *ngIf="recipe[0].strIngredient18 != null && recipe[0].strIngredient18 != ''">
+        <ion-label slot="start">{{recipe[0].strIngredient18}}</ion-label>
+        <ion-label slot="end">{{recipe[0].strMeasure18}}</ion-label>
+      </ion-item>
+      <ion-item *ngIf="recipe[0].strIngredient19 != null && recipe[0].strIngredient19 != ''">
+        <ion-label slot="start">{{recipe[0].strIngredient19}}</ion-label>
+        <ion-label slot="end">{{recipe[0].strMeasure19}}</ion-label>
+      </ion-item>
+      <ion-item *ngIf="recipe[0].strIngredient20 != null && recipe[0].strIngredient20 != ''">
+        <ion-label slot="start">{{recipe[0].strIngredient20}}</ion-label>
+        <ion-label slot="end">{{recipe[0].strMeasure20}}</ion-label>
+      </ion-item>
+
+    </ion-list>
+    
+    <ion-text style="font-size: 17px;">
+      {{ recipe[0].strInstructions }}
+    </ion-text>
+  </ion-card>
+
+  
+  
+</ion-content>

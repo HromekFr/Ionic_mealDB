@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title slot="start">Favorites</ion-title>
+    <ion-button (click)="removeAll()" slot="end">
+      <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngIf="length == 0">
+      There are currently no favorite recipes
+    </ion-item>
+    <ion-item *ngFor="let recipe of recipes | async">
+      <ion-avatar slot="start">
+        <img [src]="recipe.strMealThumb" *ngIf="recipe.strMealThumb !== 'N/A'">
+      </ion-avatar>
+      <ion-label text-wrap>
+        <h3>{{ recipe.strMeal }}</h3>
+        {{ recipe.strCategory }}
+      </ion-label>
+
+      <ion-button (click)="removeFavorite(recipe.idMeal)">Remove</ion-button>
+
+    </ion-item>
+  </ion-list>
+</ion-content>
