@@ -1,0 +1,9 @@
+{
+  "name": "mealApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+
+  
+}
